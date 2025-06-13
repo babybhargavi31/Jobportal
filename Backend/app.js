@@ -7,7 +7,7 @@ require("dotenv").config();
 var cors = require('cors');
 
 // import routes
-const authRoutes = require('./routes/authroutes');
+const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const jobTypeRoutes = require('./routes/jobsTypeRoutes');
 const jobsRoutes = require('./routes/jobsRoutes');
