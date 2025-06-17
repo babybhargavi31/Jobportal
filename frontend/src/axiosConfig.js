@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://jobportal-e8ss.onrender.com"
+  baseURL: "https://jobportal-e8ss.onrender.com/api"
 });
 
 export default API;
