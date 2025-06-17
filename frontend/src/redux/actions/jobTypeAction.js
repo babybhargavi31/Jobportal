@@ -15,10 +15,12 @@ export const jobTypeLoadAction = () => async (dispatch) => {
             payload: data
         });
     } catch (error) {
+        const message = error.response?.data?.error || error.message || "Something went wrong";
         dispatch({
             type: JOB_TYPE_LOAD_FAIL,
-            payload: error.response.data.error
+            payload: message
         });
+        toast.error(message);
     }
 }
 
@@ -31,16 +33,15 @@ export const createJobTypeAction = (jobtype) => async (dispatch) => {
         dispatch({
             type: CREATE_JOB_TYPE_SUCCESS,
             payload: data
-        })
+        });
         toast.success("Job type created successfully");
 
-
     } catch (error) {
+        const message = error.response?.data?.error || error.message || "Something went wrong";
         dispatch({
             type: CREATE_JOB_TYPE_FAIL,
-            payload: error.response.data.error
-        })
-        toast.error(error.response.data.error);
-
+            payload: message
+        });
+        toast.error(message);
     }
 }
