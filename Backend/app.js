@@ -33,11 +33,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cookieParser());
-app.use(cors({
-  origin: 'https://your-vercel-project-name.vercel.app',
-  credentials: true
-}));
-
+app.use(cors());
 
 //ROUTES MIDDLEWARE
 //app.get('/', (req, res) => {
