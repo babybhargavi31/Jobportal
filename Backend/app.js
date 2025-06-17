@@ -34,10 +34,13 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 
+const cors = require('cors');
+
 app.use(cors({
-  origin: 'https://your-frontend.vercel.app', // frontend URL
+  origin: ['http://localhost:3000', 'https://jobportal-seven-zeta.vercel.app'],
   credentials: true
 }));
+
 
 
 //ROUTES MIDDLEWARE
